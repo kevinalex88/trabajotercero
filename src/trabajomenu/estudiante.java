@@ -1,28 +1,28 @@
-
 package trabajomenu;
 
-
 public class estudiante {
-    
+
     private String nombre;
-     private String apellido;
+    private String apellido;
     private String identificacion;
-     private int puesto;
+    private int puesto;
     private Double nota;
-    
+
     public estudiante(String nombre, String apellido, String identificacion, int puesto, Double nota) {
-        
-        setNombre (nombre);
-         setApellido (apellido);
-          setIdentificacion (identificacion);
-           setPuesto (puesto);
-            setNota (nota);
+
+        setNombre(nombre);
+        setApellido(apellido);
+        setIdentificacion(identificacion);
+        setPuesto(puesto);
+        setNota(nota);
     }
-    
-    public String imprimir(){
-        
-        return "";
-        
+
+    public String imprimir() {
+        String mensaje = "";
+        mensaje = getNombre() + " " + getApellido() + " " + getNota() + " " + getPuesto();
+
+        return mensaje;
+
     }
 
     public String getNombre() {
@@ -64,9 +64,5 @@ public class estudiante {
     public void setNota(Double nota) {
         this.nota = nota;
     }
-    
-    
-            
-            
-    
+
 }

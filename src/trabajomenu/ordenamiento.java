@@ -1,6 +1,8 @@
 
 package trabajomenu;
 
+import javax.swing.JOptionPane;
+
 
 public class ordenamiento {
     
@@ -12,11 +14,11 @@ public class ordenamiento {
       arrayEstudiantes[2] = new estudiante("andres", "garcia","123", 3, 4.8);
       arrayEstudiantes[3] = new estudiante("pedro", "polania","123", 2, 4.2);
       arrayEstudiantes[4] = new estudiante("camilo", "sanchez","123", 1, 2.0);
-      arrayEstudiantes[5] = new estudiante("juan", "pola","123", 6, 3.5);
+      
       
       int temp;
         for(int i=1;i<arrayEstudiantes.length;i++){
-            for(int j=0;j<arrayEstudiantes.length;j++){
+            for(int j=0;j<arrayEstudiantes.length-1;j++){
                 if(arrayEstudiantes[j].getNota()<arrayEstudiantes[j+1].getNota()){
                     temp=arrayEstudiantes[j].getPuesto();
                     arrayEstudiantes[j].setPuesto(arrayEstudiantes[j+1].getPuesto());
@@ -26,6 +28,10 @@ public class ordenamiento {
         
     }
     
+        
+        for (int x=0;x < arrayEstudiantes.length;x++){
+            JOptionPane.showMessageDialog(null, arrayEstudiantes[x].imprimir());
+        }
 }
     
 }
